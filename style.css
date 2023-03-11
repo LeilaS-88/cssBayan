@@ -1,0 +1,21 @@
+/*
+mobile 320x568, tablet 820x1180, desktop 1920×1080
+*/
+body {
+    width: 100%;
+    background-color:burlywood;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    background-color:rgb(227, 225, 141);
+}
+
+.img-container {
+    
+}
+
+.img {
+    
+}
