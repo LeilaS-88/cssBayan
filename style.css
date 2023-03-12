@@ -68,6 +68,11 @@ body {
 
 .container__item-input:checked ~ .container-img {
     display: block;
+    /*transition: transform 4s ease-in-out 1s;*/
+}
+
+.container__item-input:hover {
+    transition: transform 4s ease-in-out 1s;
 }
 /*
 .fa-window-close {
@@ -81,6 +86,11 @@ body {
     margin: 10px auto;
     display: none;
     overflow: hidden;
+}
+
+.container-img:active {
+    opacity: 0.3;
+    
 }
 
 @media (min-width: 820px) {
