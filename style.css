@@ -1,72 +1,103 @@
 /*
 mobile 320x568, tablet 820x1180, desktop 1920×1080
 */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     width: 100%;
-    background-color:burlywood;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    line-height: 1.2;
+    background-color:rgb(132, 143, 164);
 }
+
+/* Container */
 
 .container {
-    display: none;
     width: 80%;
-    margin: 0 auto;
-    background-color:rgb(227, 225, 141);
+    margin: 5px auto;
 }
+
+.title {
+    text-align: center;
+}
+
+.container__item {
+    border: 2px solid rgb(81, 88, 100);
+    border-radius: 15px;
+    margin-bottom: 10px;
+    padding: 10px;
 /*
-.container:hover {
-    cursor: pointer;
-}
-
-.expression {
     display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: space-between;
+  */  
 }
-
-.ico {
-    display: inline-block;
-}
-
-.ico-close {
-    background-image: url("/assets/icons/cancel.png");
-    width: 20px;
-    height: 20px;
-}
-
-.img-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    
-}
-
-.img {
-    height: auto;
-    width: 100%;
-}
-*/
-
-.container2 {
-    width: 80%;
-    margin: 20px auto;
-    background-color:darkcyan;
-    /*display: flex;
-    direction: column;*/
-}
-
 
 @media (min-width: 1920px) {
-    .container2:hover {
+    .container__item {
         cursor: pointer;
     }
 }
 
-.img-container2 {
+.container__item-title {
+    display: block;
+    padding: 10px;
+    
+}
+
+.container__item-title:hover {
+    color: #fff;
+}
+
+@media (min-width: 1920px) {
+    .container__item-title {
+        cursor: pointer;
+    }
+}
+
+.container__item-input {
+    appearance: none;
+}
+
+.container__item-input:checked ~ .container-img {
+    display: block;
+}
+/*
+.fa-window-close {
+    
     display: none;
-    justify-content: center;
-    align-items: center;
+    
+}*/
+
+.container-img {
+
+    margin: 10px auto;
+    display: none;
+    overflow: hidden;
+}
+
+@media (min-width: 820px) {
+    .container-img {
+        width: 500px;
+        height: 500px;
+    }
 }
 
 .image {
     height: auto;
     width: 100%;
 }
+/*
+.container__row {
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: space-between;
+}*/
