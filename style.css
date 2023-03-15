@@ -1,0 +1,146 @@
+/*
+mobile 320x568, tablet 820x1180, desktop 1920×1080
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    line-height: 1.2;
+    background-color:rgb(132, 143, 164);
+}
+
+/* Container */
+
+.container {
+    width: 80%;
+    margin: 5px auto;
+}
+
+.title {
+    text-align: center;
+    font-size: 2rem;
+}
+
+@media (min-width: 820px) {
+    .title {
+        font-size: 2.5rem;
+    }
+}
+
+@media (min-width: 1920px) {
+    .title {
+        font-size: 3.5rem;
+    }
+}
+
+.container__item {
+    border: 2px solid rgb(81, 88, 100);
+    border-radius: 15px;
+    margin-bottom: 10px;
+    padding: 10px;
+    
+}
+
+@media (min-width: 1920px) {
+    .container__item {
+        cursor: pointer;
+    }
+}
+
+.container__item-title {
+    width: 100%;
+    display: inline-block;
+    
+    padding: 10px;
+    font-size: 1.5rem;  
+}
+
+.container__item-title:hover {
+    color: #fff;
+}
+
+@media (min-width: 320px) {
+    .container__item-title {
+        cursor: pointer;
+    }
+}
+
+@media (min-width: 1920px) {
+    .container__item-title {
+        cursor: pointer;
+    }
+}
+
+.container_row {
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    font-size: 1.5rem;
+    font-weight: 300;
+    transition: 0.3s;
+}
+
+@media (min-width: 820px) {
+    .container_row {
+        font-size: 2rem;  
+    }
+}
+
+@media (min-width: 1920px) {
+    .container_row {
+        font-size: 2.5rem;  
+    }
+}
+
+.fa {
+    appearance: none;
+    transition: 0.2s;
+}
+
+.container__item-input {
+    appearance: none;
+}
+
+.container-img {
+    margin: 10px auto;
+    display: none;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.container-img:active {
+    opacity: 0.3;
+}
+
+@media (min-width: 820px) {
+    .container-img {
+        width: 500px;
+        height: 500px;
+    }
+}
+/*
+.container__item-input:hover ~ .container__item-title > .container-img {
+    display: block;   
+}*/
+
+.container__item-input:checked ~ .container__item-title > .container-img {
+    display: block;
+} 
+
+.container__item-input:checked ~ .container__item-title > .container_row >.fa {
+    transform: rotate(45deg);
+}  
+
+.image {
+    height: auto;
+    width: 100%;
+    transition: 0.5s;
+}
+
